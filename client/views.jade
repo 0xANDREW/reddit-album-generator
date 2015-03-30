@@ -1,9 +1,17 @@
+head
+  title Reddit Album Generator
+
 template(name='layout')
   .container-fluid
     h4
-      a(href='http://www.reddit.com/r/funny/comments/lplhn/every_band_ever_used_this/' target='_blank')
-        span The inspiration for this
-        span.glyphicon.glyphicon-new-window
+      span.header-link
+        a(href='http://www.reddit.com/r/funny/comments/lplhn/every_band_ever_used_this/' target='_blank')
+          span The inspiration for this
+          span.glyphicon.glyphicon-new-window
+      span.header-link
+        a(href='https://github.com/0xANDREW/reddit-album-generator' target='_blank')
+          span Source
+          span.glyphicon.glyphicon-new-window
 
     .btn-group
       a.btn.btn-primary(href='/')

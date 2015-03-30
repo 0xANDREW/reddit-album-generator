@@ -33,3 +33,7 @@
     min-height: 10px;
     clear: both;
 }
+
+span.header-link {
+    margin-right: 15px;
+}
