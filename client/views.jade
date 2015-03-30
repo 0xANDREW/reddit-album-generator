@@ -1,12 +1,19 @@
 template(name='layout')
   .container-fluid
-    h3
-      a(href='http://www.reddit.com/r/funny/comments/lplhn/every_band_ever_used_this/') Inspiration for this thing
+    h4
+      a(href='http://www.reddit.com/r/funny/comments/lplhn/every_band_ever_used_this/' target='_blank')
+        span The inspiration for this
+        span.glyphicon.glyphicon-new-window
 
     .btn-group
-      a.btn.btn-primary(href='/') Generate
-      a.btn.btn-default(href='/albums') Archive
-
+      a.btn.btn-primary(href='/')
+        span.glyphicon.glyphicon-refresh
+        span Generate
+        
+      a.btn.btn-default(href='/albums')
+        span.glyphicon.glyphicon-list
+        span Archive
+      
     .spacer
 
     #content
@@ -34,9 +41,12 @@ template(name='album_row')
     .col-md-4
       a(href='/albums/{{ _id }}') {{ title }}
     .col-md-2
-      img(src='{{ image_url }}' height='30')
+      a(href='{{ image_url }}' target='_blank')
+        img(src='{{ image_url }}' height='30')
     .col-md-2
-      button.delete.btn.btn-danger Delete
+      button.delete.btn.btn-danger
+        span.glyphicon.glyphicon-trash
+        span Delete
 
 template(name='home')
   +album
