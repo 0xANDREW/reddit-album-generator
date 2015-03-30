@@ -11,9 +11,12 @@ var get_artist = Async.wrap(function(done){
         var $ = cheerio.load(body);
 
         // Remove parens part from title
-        var sp = $('#firstHeading').text().split(' (');
+        var sp = $('#firstHeading').text().split(' (')[0].split(' ');
+        var words = _.map(sp, function(w){
+            return s.capitalize(w);
+        });
 
-        done(null, s.capitalize(sp[0]));
+        done(null, words.join(' '));
     });
 });
 
