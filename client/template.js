@@ -8,16 +8,14 @@ function generate(tpl){
         tpl.$('#image').attr('src', album.image_url);
 
         var _id = ALBUMS.insert(album);
+
+        // Go to the album page, that way going to the generate link
+        // always refreshes
         Router.go('/albums/' + _id);
     });
 }
 
-// Template.body.events({
-//     'click #go': function(){
-//         generate(Template.instance());
-//     }
-// });    
-
+// Generate on page load
 Template.home.onRendered(function(){
     generate(Template.instance());
 });
