@@ -52,10 +52,6 @@ template(name='album_row')
     .col-md-2
       a(href='{{ image_url }}' target='_blank')
         img(src='{{ image_url }}' height='30')
-    .col-md-2
-      button.delete.btn.btn-danger
-        span.glyphicon.glyphicon-trash
-        span Delete
 
 template(name='home')
   +album

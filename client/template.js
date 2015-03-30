@@ -19,12 +19,3 @@ function generate(tpl){
 Template.home.onRendered(function(){
     generate(Template.instance());
 });
-
-Template.album_row.events({
-    'click .delete': function(){
-        if (confirm('Delete?')){
-            var _id = Template.instance().$('.album-id').val();
-            ALBUMS.remove(_id);
-        }
-    }
-});
