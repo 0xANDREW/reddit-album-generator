@@ -1,0 +1,48 @@
+template(name='layout')
+  .container-fluid
+    h3
+      a(href='http://www.reddit.com/r/funny/comments/lplhn/every_band_ever_used_this/') Inspiration for this thing
+
+    .btn-group
+      a.btn.btn-primary(href='/') Generate
+      a.btn.btn-default(href='/albums') Archive
+
+    .spacer
+
+    #content
+      +yield
+
+template(name='albums')
+  .row
+    .col-md-4
+      strong Artist
+    .col-md-4
+      strong Title
+    .col-md-2
+      strong Image
+
+  .spacer
+
+  +each albums
+    +album_row
+
+template(name='album_row')
+  .row.album-row
+    input.album-id(type='hidden' value='{{ _id }}')
+
+    .col-md-4 {{ artist }}
+    .col-md-4
+      a(href='/albums/{{ _id }}') {{ title }}
+    .col-md-2
+      img(src='{{ image_url }}' height='30')
+    .col-md-2
+      button.delete.btn.btn-danger Delete
+
+template(name='home')
+  +album
+
+template(name='album')
+  #album
+    img#image(height='500' src='{{ image_url }}')
+    #artist.album-text {{ artist }}
+    #title.album-text {{ title }}

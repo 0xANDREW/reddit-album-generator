@@ -1,0 +1,35 @@
+.album-text {
+    /* -webkit-text-stroke: 1px white; */
+
+    text-shadow:
+    3px 3px 0 #FFF,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+    -1px -1px 0 #FFF,  
+    1px -1px 0 #FFF,
+    -1px  1px 0 #FFF,
+    1px  1px 0 #FFF;
+}
+
+#artist {
+    position: relative;
+    font-size: 25pt;
+    top: -490px;
+    left: 10px;
+}
+
+#title {
+    position: relative;
+    font-size: 20pt;
+    top: -100px;
+    left: 10px;
+}
+
+.album-row {
+    line-height: 3.0;
+}
+
+.spacer {
+    min-height: 10px;
+    clear: both;
+}
