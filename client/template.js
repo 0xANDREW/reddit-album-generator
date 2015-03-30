@@ -22,7 +22,9 @@ Template.home.onRendered(function(){
 
 Template.album_row.events({
     'click .delete': function(){
-        var _id = Template.instance().$('.album-id').val();
-        ALBUMS.remove(_id);
+        if (confirm('Delete?')){
+            var _id = Template.instance().$('.album-id').val();
+            ALBUMS.remove(_id);
+        }
     }
 });
