@@ -15,10 +15,12 @@
 #album {
     position: relative;
     overflow: hidden;
+    max-width: 75vw;
+    max-height: 75vh;
 }
 
 #artist {
-    font-size: 6vw;
+    font-size: 5vw;
 }
 
 #title {
