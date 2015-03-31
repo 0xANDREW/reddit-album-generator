@@ -36,6 +36,8 @@ template(name='albums')
       strong Title
     .col-md-2
       strong Image
+    .col-md-2
+      strong Date
 
   .spacer
 
@@ -52,6 +54,7 @@ template(name='album_row')
     .col-md-2
       a(href='{{ image_url }}' target='_blank')
         img(src='{{ image_url }}' height='30')
+    .col-md-2 {{ pretty_date created_at }}      
 
 template(name='home')
   +album

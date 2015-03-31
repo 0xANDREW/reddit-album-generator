@@ -19,3 +19,9 @@ function generate(tpl){
 Template.home.onRendered(function(){
     generate(Template.instance());
 });
+
+Template.album_row.helpers({
+    pretty_date: function(date){
+        return date.toString('yyyy-MM-dd HH:mm');
+    }
+});
