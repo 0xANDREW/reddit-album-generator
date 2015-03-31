@@ -1,8 +1,11 @@
 function generate(tpl){
     tpl.$('#artist, #title').html('');
     tpl.$('#image').attr('src', '');
+    tpl.$('#loading').show();
 
     Meteor.call('get_album', function(err, album){
+        tpl.$('#loading').hide();
+
         tpl.$('#artist').html(album.artist);
         tpl.$('#title').html(album.title);
         tpl.$('#image').attr('src', album.image_url);
